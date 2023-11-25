@@ -1,4 +1,5 @@
 <header
+  id='page-header'
   class='fixed top-0 w-full pt-3 px-12 flex justify-between items-center font-medium text-white z-50'
 >
   <div class='grow basis-0'>
@@ -58,3 +59,26 @@
     </ul>
   </nav>
 </header>
+
+<script>
+  const header = document.querySelector('#page-header') as HTMLElement;
+  const sections = document.querySelectorAll('.page-section');
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.9,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const { isIntersecting } = entry;
+      if (isIntersecting) {
+        const color = entry.target.getAttribute('data-header-color');
+        header.style.color = color;
+      }
+    });
+  }, observerOptions);
+
+  sections.forEach((section) => observer.observe(section));
+</script>

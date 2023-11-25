@@ -1,8 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PageHeader from '../components/PageHeader.astro';
-import ContentSection from '../components/ContentSection.astro';
-import ChargeSection from '../components/ChargeSection.astro';
+import FirstSection from '../components/FirstSection.astro';
+import Model3Section from '../components/Model3Section.astro';
+import ModelXSection from '../components/ModelXSection.astro';
 ---
 
 <Layout title='Tesla Landing Page Clon'>
@@ -10,10 +11,13 @@ import ChargeSection from '../components/ChargeSection.astro';
 
   <main class='snap-y snap-mandatory relative w-full h-screen overflow-auto'>
     <div class='snap-center'>
-      <ContentSection />
+      <FirstSection />
     </div>
     <div class='snap-center'>
-      <ChargeSection />
+      <Model3Section />
+    </div>
+    <div class='snap-center'>
+      <ModelXSection />
     </div>
   </main>
 </Layout>
