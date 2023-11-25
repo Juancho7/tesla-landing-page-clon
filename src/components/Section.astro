@@ -1,0 +1,26 @@
+---
+const { color, title, subtitle, aText1, aText2 } = Astro.props;
+---
+
+<section
+  class={`page-section relative h-screen w-full text-center text-${color} overflow-hidden`}
+  data-header-color={color}
+>
+  <div class='pt-28 pb-20 flex flex-col justify-between h-full'>
+    <header class='z-30 relative'>
+      <h2 class='mb-2 text-[40px]/[40px] font-medium'>{title}</h2>
+      <a href='#' class='text-sm underline'>{subtitle}</a>
+    </header>
+
+    <footer
+      class='z-30 relative flex justify-center gap-x-6 text-sm font-medium [&>a]:py-3 [&>a]:w-[264px] [&>a]:rounded'
+    >
+      <a href='#' class='bg-gray-800/[0.8] text-white'>{aText1}</a>
+      <a href='#' class='bg-white/[0.65] text-black'>{aText2}</a>
+    </footer>
+  </div>
+
+  <div class='absolute top-0 w-full h-full'>
+    <slot />
+  </div>
+</section>

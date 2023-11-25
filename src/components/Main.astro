@@ -1,0 +1,50 @@
+---
+import Section from '../components/Section.astro';
+---
+
+<main class='snap-y snap-mandatory relative w-full h-screen overflow-auto'>
+  <div class='snap-center'>
+    <Section
+      color={'white'}
+      title={'Model Y'}
+      subtitle={'Schedule a drive test'}
+      aText1={'Custom order'}
+      aText2={'Explore inventory'}
+    >
+      <video
+        src='/Homepage-video1.mp4'
+        autoplay
+        class='w-full h-full object-cover'></video>
+    </Section>
+  </div>
+  <div class='snap-center'>
+    <Section
+      color={'white'}
+      title={'Model 3'}
+      subtitle={'Explore inventory'}
+      aText1={'Order'}
+      aText2={'Drive test'}
+    >
+      <img
+        src='/Model-3-Desktop.avif'
+        alt='Model 3'
+        class='w-full h-full object-cover'
+      />
+    </Section>
+  </div>
+  <div class='snap-center'>
+    <Section
+      color={'black'}
+      title={'Model X'}
+      subtitle={'Schedule a drive test'}
+      aText1={'Custom order'}
+      aText2={'Explore inventory'}
+    >
+      <img
+        src='/Model-X-Desktop.avif'
+        alt='Model X'
+        class='w-full h-full object-cover'
+      />
+    </Section>
+  </div>
+</main>
